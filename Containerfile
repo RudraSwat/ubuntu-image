@@ -1,6 +1,6 @@
 ARG UBUNTU_RELEASE=rolling
 
-FROM ubuntu:rolling
+FROM ubuntu:$UBUNTU_RELEASE
 
 ARG DESKTOP=nogui
 
