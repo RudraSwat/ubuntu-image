@@ -9,19 +9,15 @@ RUN apt-get update && \
                                                        python3-click \
                                                        python3-requests \
                                                        python3-fasteners \
-                                                       umoci \
-                                                       skopeo \
-                                                       jq \
-                                                       git \
-                                                       sudo \
+                                                       umoci skopeo \
+                                                       jq git sudo \
                                                        pacman-package-manager \
-                                                       linux-generic \
-                                                       systemd \
-                                                       systemd-container \
+                                                       linux-generic dracut \
+                                                       systemd systemd-container \
                                                        locales \
                                                        grub2-common \
                                                        ubuntu-standard \
-                                                       dracut \
+                                                       distrobox podman \
                                                        software-properties-common
 
 RUN if [ "$DESKTOP" = gnome ]; then apt-get update; DEBIAN_FRONTEND=noninteractive apt-get install -yq ubuntu-desktop; \
