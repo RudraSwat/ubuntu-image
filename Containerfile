@@ -13,9 +13,9 @@ RUN apt-get update && \
                                                        jq git sudo \
                                                        pacman-package-manager \
                                                        linux-generic dracut \
+                                                       grub2-common grub-efi grub-pc \
                                                        systemd systemd-container \
                                                        locales \
-                                                       grub2-common \
                                                        ubuntu-standard \
                                                        distrobox podman \
                                                        software-properties-common

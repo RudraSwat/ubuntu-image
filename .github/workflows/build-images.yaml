@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       max-parallel: 5
       matrix:
-        ubuntu_release: [noble, questing, rolling]
+        ubuntu_release: [rolling, questing, noble]
         desktop: [nogui, gnome, plasma]
     steps:
       - name: Checkout Push to Registry action
