@@ -13,7 +13,8 @@ RUN apt-get update && \
                                                        jq git sudo \
                                                        pacman-package-manager \
                                                        linux-generic dracut \
-                                                       grub2-common grub-efi grub-pc \
+                                                       grub2-common \
+                                                       grub-efi-amd64-bin grub-pc-bin \
                                                        systemd systemd-container \
                                                        locales \
                                                        ubuntu-standard \
