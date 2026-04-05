@@ -18,8 +18,9 @@ RUN apt-get update && \
                                                        systemd systemd-container \
                                                        locales \
                                                        ubuntu-standard \
-                                                       distrobox podman \
-                                                       software-properties-common
+                                                       distrobox podman flatpak \
+                                                       software-properties-common && \
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 RUN if [ "$DESKTOP" = gnome ]; then apt-get update; DEBIAN_FRONTEND=noninteractive apt-get install -yq ubuntu-desktop; \
   elif [ "$DESKTOP" = plasma ]; then apt-get update; DEBIAN_FRONTEND=noninteractive apt-get install -yq kubuntu-desktop; fi
